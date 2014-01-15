@@ -1,0 +1,89 @@
+
+<header>
+	<div class="row">
+		<div class="col-sm-4">
+			<h1 id="hostPageTitle">MongoDB Databases</h1>
+		</div>
+
+		<div class="col-sm-4 text-center">
+			<div id="backup_status_widget" class="alert alert-header jshide" style="display: inline-block;"></div>
+		</div>
+
+		<div class="col-sm-4">
+			<button class="btn btn-primary btn-sm pull-right requiresGroupAdmin" id="addHost">
+				<i class="icon-plus"></i> Add Database
+			</button>
+		</div>
+	</div>
+</header>
+
+   
+<div class="databasesTableContainer">
+	<div id="databasesTable_wrapper" class="dataTables_wrapper form-inline" role="grid">
+		<table class="table table-hover dataTable" id="databasesTable" aria-describedby="databasesTable_info">
+			<thead>
+				<tr role="row">
+					<th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="databasesTable" rowspan="1" colspan="1" aria-sort="ascending"
+						aria-label="Name: activate to sort column descending">Name</th>
+					<th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="databasesTable" rowspan="1" colspan="1"
+						aria-label="Region: activate to sort column ascending">Region</th>
+					<th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="databasesTable" rowspan="1" colspan="1"
+						aria-label="Version: activate to sort column ascending">Version</th>
+					<th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="databasesTable" rowspan="1" colspan="1"
+						aria-label="ID: activate to sort column ascending">ID</th>
+					<th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="databasesTable" rowspan="1" colspan="1"
+						aria-label="&nbsp;: activate to sort column ascending">&nbsp;</th>
+				</tr>
+			</thead>
+
+
+			<tbody role="alert" aria-live="polite" aria-relevant="all" id="databasesTableBody">
+
+
+
+
+			</tbody>
+		</table>
+	</div>
+</div>
+
+
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$.ajax({
+			type : 'GET',
+			url : 'webapi/ami',
+			dataType : 'json',
+			success : function(resultset, textStatus) {
+				displayAMI(resultset, $('#amiTable'));
+			}
+		});
+	});
+
+	function displayAMI(resultset, table) {
+		var html = [], h = -1;
+
+		$.each(resultset, function(i, n) {
+			var ami = resultset[i];
+
+			html[++h] = '<tr><td>';
+			html[++h] = ami.name;
+			html[++h] = '</td><td>';
+			html[++h] = ami.region;
+			html[++h] = '</td><td>';
+			html[++h] = ami.version;
+			html[++h] = '</td><td>';
+			html[++h] = ami._id;
+			html[++h] = '</td><td><div style="font-size: 75%; float: right;">';
+			html[++h] = '<button class="editUserButton btn btn-icon-only requiresGroupAdmin" value="';
+    		html[++h] = ami._id;
+    		html[++h] = '" data-role="GROUP_ADMIN" title="Edit"><i class="icon-pencil"></i></button>';
+			html[++h] = '<button class="deleteUserButton btn btn-icon-only requiresGroupAdmin" value="';
+    		html[++h] = ami._id;
+    		html[++h] = '" title="Delete"><i class="icon-trash"></i></button></div></td></tr>'
+		});
+
+		table.html(html.join(''));
+	}
+</script>

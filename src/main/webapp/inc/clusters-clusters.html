@@ -1,0 +1,328 @@
+
+<header>
+	<div class="row">
+		<div class="col-sm-4">
+			<h1 id="hostPageTitle">MongoDB Clusters</h1>
+		</div>
+
+		<div class="col-sm-4 text-center">
+			<div id="backup_status_widget" class="alert alert-header jshide" style="display: inline-block;"></div>
+		</div>
+
+		<div class="col-sm-4">
+			<button class="btn btn-primary btn-sm pull-right requiresGroupAdmin" id="addCluster" onclick="showAddClusterDialog()">
+				<i class="icon-plus"></i> Add Cluster
+			</button>
+		</div>
+	</div>
+</header>
+
+   
+<div class="clustersTableContainer">
+	<div id="clustersTable_wrapper" class="dataTables_wrapper form-inline" role="grid">
+		<table class="table table-hover dataTable" id="clustersTable" aria-describedby="clustersTable_info">
+			<thead>
+				<tr role="row">
+					<th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="clustersTable" rowspan="1" colspan="1" aria-sort="ascending"
+						aria-label="Name: activate to sort column descending">Name</th>
+					<th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="clustersTable" rowspan="1" colspan="1"
+						aria-label="Region: activate to sort column ascending">Region</th>
+					<th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="clustersTable" rowspan="1" colspan="1"
+						aria-label="Config Server: activate to sort column ascending">Config Server</th>
+					<th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="clustersTable" rowspan="1" colspan="1"
+						aria-label="Shards: activate to sort column ascending">Shards</th>
+					<th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="clustersTable" rowspan="1" colspan="1"
+						aria-label="Mongos: activate to sort column ascending">Mongos</th>
+					<th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="clustersTable" rowspan="1" colspan="1"
+						aria-label="&nbsp;: activate to sort column ascending">&nbsp;</th>
+				</tr>
+			</thead>
+
+
+			<tbody role="alert" aria-live="polite" aria-relevant="all" id="clustersTableBody">
+
+
+
+
+			</tbody>
+		</table>
+	</div>
+</div>
+
+
+<div id="addClusterContainer" class="modal in" tabindex="-1" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="closeAddClusterDialog()">x</button>
+        <h3>New Cluster</h3>
+      </div>
+
+      <form class="form-horizontal" id="addHostForm" autocomplete="off" role="form">
+        <div class="modal-body">
+          <div id="addHostFormErrorMsgs"></div>
+
+          <div style="text-align: left">MMC will automagically do something. How's that?<br><br></div>
+
+          
+          <div class="form-group">
+            <label class="col-sm-4 control-label" for="clusterName">Cluster Name</label>
+            <div class="col-sm-7">
+              <input type="text" id="clusterName" class="form-control" name="clusterName" placeholder="Name of the new cluster">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="col-sm-4 control-label" for="regionList">Region</label>
+            <div class="col-sm-7">
+            	<select id="regionList" class="form-control">
+            		<option value="US East (Virginia)">US East (Virginia)</option>
+            		<option value="US West (Oregon)">US West (Oregon)</option>
+            		<option value="US West (Northern California)">US West (Northern California)</option>
+            		<option value="EU West (Ireland)">EU West (Ireland)</option>
+            		<option value="Asia Pacific (Singapore)">Asia Pacific (Singapore)</option>
+            		<option value="Asia Pacific (Sydney)">Asia Pacific (Sydney)</option>
+            		<option value="Asia Pacific (Tokyo)">Asia Pacific (Tokyo)</option>
+            		<option value="South America (Sao Paulo)">South America (Sao Paulo)</option>
+            	</select>
+            </div>
+          </div>
+          
+		  <div class="form-group">
+            <label class="col-sm-4 control-label" for="configServers">Config Servers</label>
+            <div class="col-sm-7">
+              <input type="text" id="configServers" class="form-control" name="configServers" placeholder="# of Config Servers">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="col-sm-4 control-label" for="configServersAmiList">AMI for Config Server</label>
+            <div class="col-sm-7">
+              <select id="configServersAmiList" class="form-control">
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="col-sm-4 control-label" for="configServersInstanceTypeList">Instance type for Config Server</label>
+            <div class="col-sm-7">
+              <select id="configServersInstanceTypeList" class="form-control">
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="col-sm-4 control-label" for="shards">Shards</label>
+            <div class="col-sm-7">
+              <input type="text" id="shards" class="form-control" name="shards" placeholder="# of Shards">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-4 control-label" for="replicationFactor">Replication Factor</label>
+            <div class="col-sm-7">
+              <input type="text" id="replicationFactor" class="form-control" name="replicationFactor" placeholder="# of replicas per shard">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="col-sm-4 control-label" for="mongodServersAmiList">AMI for Mongods</label>
+            <div class="col-sm-7">
+              <select id="mongodServersAmiList" class="form-control">
+              </select>
+            </div>
+          </div>
+     
+          <div class="form-group">
+            <label class="col-sm-4 control-label" for="mongodInstanceTypeList">Instance type for Mongods</label>
+            <div class="col-sm-7">
+              <select id="mongodInstanceTypeList" class="form-control">
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-4 control-label" for="mongos">Mongos</label>
+            <div class="col-sm-7">
+              <input type="text" id="mongos" class="form-control" name="replicationFactor" placeholder="# of mongos">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-4 control-label" for="mongosServersAmiList">AMI for Mongos</label>
+            <div class="col-sm-7">
+              <select id="mongosServersAmiList" class="form-control">
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="col-sm-4 control-label" for="mongosInstanceTypeList">Instance type for Mongos</label>
+            <div class="col-sm-7">
+              <select id="mongosInstanceTypeList" class="form-control">
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-sm-7 col-sm-offset-4">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" id="useMongod" name="useMongod"> Run mongos on shards <i class="icon-info-sign tip" title="" data-original-title="Check this box ONLY if you do not want to use separate servers for mongos processes."></i>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+            <button id="addHostSubmit" class="btn btn-primary" type="submit">Add</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+
+
+	$(document).ready(function() {
+		var region = $('#regionList option:selected').val();
+		
+		$.ajax({
+			type : 'GET',
+			url : 'webapi/cluster',
+			dataType : 'json',
+			success : function(resultset, textStatus) {
+				buildClusterList(resultset, $('#clustersTableBody'));
+			}
+		});
+		
+		$.ajax({
+			type : 'GET',
+			url : 'webapi/ami/search',
+			data: {'region': region},
+			dataType : 'json',
+			success : function(resultset, textStatus) {
+				buildAMIList(resultset, $('#configServersAmiList'));
+				buildAMIList(resultset, $('#mongodServersAmiList'));
+				buildAMIList(resultset, $('#mongosServersAmiList'));
+			}
+		});
+		
+		$.ajax({
+			type : 'GET',
+			url : 'webapi/instanceType/search',
+			data: {'region': region},
+			dataType : 'json',
+			success : function(resultset, textStatus) {
+				buildInstanceTypeList(resultset, $('#configServersInstanceTypeList'));
+				buildInstanceTypeList(resultset, $('#mongodInstanceTypeList'));
+				buildInstanceTypeList(resultset, $('#mongosInstanceTypeList'));
+			}
+		});
+	});
+	
+	$( "#addHostForm" ).submit(function( event ) {
+		var clusterName = $('#clusterName').val();
+		var region = $('#regionList option:selected').val();
+		var configServers = $('#configServers').val();
+		var configServersAmiList = $('#configServersAmiList option:selected').val();
+		var configServersInstanceTypeList = $('#configServersInstanceTypeList option:selected').val();
+		var shards = $('#shards').val();
+		var replicationFactor = $('#replicationFactor').val();
+		var mongodServersAmiList = $('#mongodServersAmiList option:selected').val();
+		var mongodInstanceTypeList = $('#mongodInstanceTypeList option:selected').val();
+		var mongos = $('#mongos').val();
+		var mongosServersAmiList = $('#mongosServersAmiList option:selected').val();
+		var mongosInstanceTypeList = $('#mongosInstanceTypeList option:selected').val();
+		
+		$.ajax({
+			type : 'GET',
+			url : 'webapi/cluster/create',
+			data: {'clusterName' : clusterName, 'region' : region, 
+				'configServers' : configServers, 'configServersAmiList' : configServersAmiList, 'configServersInstanceTypeList' :  configServersInstanceTypeList, 
+				'shards' :  shards, 'replicationFactor' :  replicationFactor, 'mongodServersAmiList' : mongodServersAmiList, 'mongodInstanceTypeList' :  mongodInstanceTypeList, 
+				'mongos' : mongos, 'mongosServersAmiList' : mongosServersAmiList, 'mongosInstanceTypeList': mongosInstanceTypeList},
+			dataType : 'json',
+			success : function(resultset, textStatus) {
+				
+			},
+			error : function(jqXHR, textStatus, errorThrown ) {
+				
+			}
+		});
+		event.preventDefault();
+	});
+	
+
+	function buildAMIList(resultset, list) {
+		var html = [], h = -1;
+
+		$.each(resultset, function(i, n) {
+			var ami = resultset[i];
+
+			html[++h] = '<option value="';
+			html[++h] = ami._id;
+			html[++h] = '">';
+			html[++h] = ami.name;
+			html[++h] = '</option>';
+		});
+
+		list.html(html.join(''));
+	}
+	
+	function buildInstanceTypeList(resultset, list) {
+		var html = [], h = -1;
+
+		$.each(resultset, function(i, n) {
+			var instanceType = resultset[i];
+
+			html[++h] = '<option value="';
+			html[++h] = instanceType.id;
+			html[++h] = '">';
+			html[++h] = instanceType.name;
+			html[++h] = '</option>';
+		});
+
+		list.html(html.join(''));
+	}
+	
+	function buildClusterList(resultset, table) {
+		var html = [], h = -1;
+
+		$.each(resultset, function(i, n) {
+			var cluster = resultset[i];
+
+			html[++h] = '<tr><td>';
+			html[++h] = cluster.name;
+			html[++h] = '</td><td>';
+			html[++h] = cluster.region;
+			html[++h] = '</td><td>';
+			html[++h] = cluster.configServers;
+			html[++h] = '</td><td>';
+			html[++h] = cluster.shards;
+			html[++h] = '</td><td>';
+			html[++h] = cluster.mongos;
+			html[++h] = '</td><td><div style="font-size: 75%; float: right;">';
+			html[++h] = '<button class="editUserButton btn btn-icon-only requiresGroupAdmin" value="';
+			html[++h] = cluster.name;
+			html[++h] = '" data-role="GROUP_ADMIN" title="Edit"><i class="icon-pencil"></i></button>&nbsp;';
+			html[++h] = '<button class="deleteUserButton btn btn-icon-only requiresGroupAdmin" value="';
+			html[++h] = cluster.name;
+			html[++h] = '" title="Delete"><i class="icon-trash"></i></button></div></td></tr>'
+			
+		});
+
+		table.html(html.join(''));
+	} 
+	
+	function showAddClusterDialog() {
+		$('#addClusterContainer').dialog();
+	}
+
+	function closeAddClusterDialog() {
+		$('#addClusterContainer').dialog("close");
+	}
+
+</script>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context 
+http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:property-placeholder location="WEB-INF/*.properties" />
+	
+	<bean id="mongo" class="org.mongodb.mcm.api.DBWrapper">
+		<constructor-arg type="java.lang.String" value="${db.mongo_host}" />
+		<constructor-arg type="int" value="${db.mongo_port}" />
+		<constructor-arg type="java.lang.String" value="${db.mongo_dbname}" />
+		<constructor-arg type="java.lang.String" value="${db.mongo_username}" />
+		<constructor-arg type="java.lang.String" value="${db.mongo_password}" />
+	</bean>
+	
+	
+	<context:annotation-config />
+	<context:component-scan base-package="org.mongodb.mcm.api.dao,org.mongodb.mcm.api.service" />
+	
+	
+
+</beans>

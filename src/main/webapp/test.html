@@ -1,0 +1,1144 @@
+<div class="row">
+    <div class="col-md-12">
+        <div id="tab-content" class="tab-content">
+          <div id="hosts" class="tab-pane active">
+            
+<div class="hostsTableContainer">
+
+  <div id="hostsTable_wrapper" class="dataTables_wrapper form-inline" role="grid"><div class="row table-top"><div class="col-md-12"><div id="hostLabelSelector" class="pull-left">
+  <div id="hostsLabelsChoose" class="btn-group">
+  <div class="dropdown host-label-nav">
+    <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="">
+      
+        all hosts
+        
+      <span class="icon-caret-down"></span>
+    </a>
+    <ul class="dropdown-menu" role="menu">
+      <li>
+        <a href="?label=ALLDEFAULTCLR">all hosts</a>
+      </li>
+      
+      <li>
+        <a href="?label=build">build</a>
+      </li>
+      
+      <li>
+        <a href="?label=mms">mms</a>
+      </li>
+      
+      <li>
+        <a href="?label=www">www</a>
+      </li>
+      
+      <li class="divider"></li>
+      <li>
+        <a href="" value="4d3874ade528c81a1fcdd511" id="showEditLabelDialogBtn" class="requiresGroupAdmin" data-toggle="modal" data-href="#hostLabels">
+          <i class="icon-pencil"></i>
+          Edit Labels
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+</div><div class="dataTables_filter" id="hostsTable_filter"><label><i class="icon-search"></i> <input type="text" aria-controls="hostsTable" data-cip-id="cIPJQ342845639"></label></div></div></div><table class="table table-hover dataTable" id="hostsTable" aria-describedby="hostsTable_info">
+    <thead>
+      <tr role="row"><th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="hostsTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Last Ping: activate to sort column descending">Last Ping</th><th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="hostsTable" rowspan="1" colspan="1" aria-label="Host: activate to sort column ascending">Host</th><th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="hostsTable" rowspan="1" colspan="1" aria-label="Type: activate to sort column ascending">Type</th><th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="hostsTable" rowspan="1" colspan="1" aria-label="Cluster: activate to sort column ascending">Cluster</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="hostsTable" rowspan="1" colspan="1" aria-label="Shard: activate to sort column ascending">Shard</th><th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="hostsTable" rowspan="1" colspan="1" aria-label="Repl Set: activate to sort column ascending">Repl Set</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="hostsTable" rowspan="1" colspan="1" aria-label="Up Since: activate to sort column ascending">Up Since</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="hostsTable" rowspan="1" colspan="1" aria-label="Version: activate to sort column ascending">Version</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="hostsTable" rowspan="1" colspan="1" aria-label="&amp;nbsp;: activate to sort column ascending">&nbsp;</th></tr>
+    </thead>
+
+    
+  <tbody role="alert" aria-live="polite" aria-relevant="all"><tr class="host-down odd">
+          <td class="hostStatusColumn tableNoWrap ">
+            
+            <span data-sortvalue="">
+              
+                  <a class="agent-status-link" href="/host/detail/4d3874ade528c81a1fcdd511/b4a70dbd7b306287c4fa2f25d80d3a44#hostLastPingTab">
+                    
+                  </a>
+                
+            </span>
+          </td>
+
+          <td class="hostNameColumn tableNoWrap ">
+            
+                <div class="clearfix">
+                <a class="host-link" href="/host/detail/4d3874ade528c81a1fcdd511/b4a70dbd7b306287c4fa2f25d80d3a44">
+                
+                    <span class="tableHostName">mci-motu2.10gen.cc</span>
+                    <span class="tableHostPort">:27017</span>
+                  
+                </a>
+                </div>
+                
+          </td>
+
+          <td class="hostTypeColumn tableNoWrap ">
+            
+            <span class="label host-label-no-data">no data</span>
+          </td>
+
+          <td class="clusterNameColumn tableNoWrap ">
+            
+          </td>
+
+          <td class="replSetNameColumn tableNoWrap ">
+            <span class="tableReplName">
+              
+            </span>
+          </td>
+
+          <td class="replSetNameColumn tableNoWrap ">
+            
+              <a href="/host/chartReplSetHosts/4d3874ade528c81a1fcdd511/523388cae4b0c2ddf6c04732">
+                <span class="tableReplName">mci</span>
+              </a>
+            
+          </td>
+
+          <td class="dateColumn tableNoWrap ">
+            
+          </td>
+
+          <td class="versionColumn tableNoWrap ">
+            
+          </td>
+
+          <td class="actionsColumn tableNoWrap ">
+            <div class="dropdown pull-right requiresGroupAdmin">
+              <a id="dLabel" role="button" class="btn btn-icon-only pull-right" data-toggle="dropdown" data-target="#" href="/page.html">
+                
+                <i class="icon-gear"></i> <i class="icon-caret-down"></i>
+              </a>
+
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <li>
+                  <a href="#" data-toggle="modal" data-target="#editHostContainer" data-value="b4a70dbd7b306287c4fa2f25d80d3a44" class="requiresGroupAdmin editHostButton">Edit Host
+                  
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="#" data-toggle="modal" data-target="#deleteHostContainer" data-value="b4a70dbd7b306287c4fa2f25d80d3a44" class="requiresGroupAdmin deleteHostButton">Remove Host</a>
+                </li>
+              </ul>
+            </div>
+          </td>
+        </tr><tr class="even">
+          <td class="hostStatusColumn tableNoWrap ">
+            
+            <span data-sortvalue="1389027198331">
+              
+                  <a class="agent-status-link" href="/host/detail/4d3874ade528c81a1fcdd511/b3b84ca79712b75db01f0849df4c09a3#hostLastPingTab">
+                    <span class="agent-status tip" data-html="true" data-original-title="&lt;strong class='small-caps'&gt;Last Ping&lt;/strong&gt;&lt;span class='value'&gt;Monday, January 06 11:53:18 EST&lt;/span&gt;&lt;strong class='small-caps'&gt;Uptime&lt;/strong&gt;&lt;span class='value'&gt;219 days&lt;/span&gt;"><i class="icon-circle text-success"></i> <span>23 secs ago</span></span>
+                  </a>
+                
+            </span>
+          </td>
+
+          <td class="hostNameColumn tableNoWrap ">
+            
+                <div class="clearfix">
+                <a class="host-link" href="/host/detail/4d3874ade528c81a1fcdd511/b3b84ca79712b75db01f0849df4c09a3">
+                
+                    <span class="tableHostName">bbout1.10gen.cc</span>
+                    <span class="tableHostPort">:27017</span>
+                  
+                </a>
+                </div>
+                
+          </td>
+
+          <td class="hostTypeColumn tableNoWrap ">
+            
+            <span class="label host-label-standalone">standalone</span>
+          </td>
+
+          <td class="clusterNameColumn tableNoWrap ">
+            
+          </td>
+
+          <td class="replSetNameColumn tableNoWrap ">
+            <span class="tableReplName">
+              
+            </span>
+          </td>
+
+          <td class="replSetNameColumn tableNoWrap ">
+            
+          </td>
+
+          <td class="dateColumn tableNoWrap ">
+            05/31/13 - 16:16
+          </td>
+
+          <td class="versionColumn tableNoWrap ">
+            
+                <span class="with-tooltip" title="" data-original-title="This host is running an old version of MongoDB.  Click to view the latest versions.">
+                <a href="http://www.mongodb.org/downloads" target="_blank">
+                  <strong class="text-error">2.4.3</strong>
+                </a>
+                </span>
+              
+          </td>
+
+          <td class="actionsColumn tableNoWrap ">
+            <div class="dropdown pull-right requiresGroupAdmin">
+              <a id="dLabel" role="button" class="btn btn-icon-only pull-right" data-toggle="dropdown" data-target="#" href="/page.html">
+                
+                <i class="icon-gear"></i> <i class="icon-caret-down"></i>
+              </a>
+
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <li>
+                  <a href="#" data-toggle="modal" data-target="#editHostContainer" data-value="b3b84ca79712b75db01f0849df4c09a3" class="requiresGroupAdmin editHostButton">Edit Host
+                  
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="#" data-toggle="modal" data-target="#deleteHostContainer" data-value="b3b84ca79712b75db01f0849df4c09a3" class="requiresGroupAdmin deleteHostButton">Remove Host</a>
+                </li>
+              </ul>
+            </div>
+          </td>
+        </tr><tr class="odd">
+          <td class="hostStatusColumn tableNoWrap ">
+            
+            <span data-sortvalue="1389027198331">
+              
+                  <a class="agent-status-link" href="/host/detail/4d3874ade528c81a1fcdd511/da82adc4cb35d7afa9d69911b10ec732#hostLastPingTab">
+                    <span class="agent-status tip" data-html="true" data-original-title="&lt;strong class='small-caps'&gt;Last Ping&lt;/strong&gt;&lt;span class='value'&gt;Monday, January 06 11:53:18 EST&lt;/span&gt;&lt;strong class='small-caps'&gt;Uptime&lt;/strong&gt;&lt;span class='value'&gt;428 days&lt;/span&gt;"><i class="icon-circle text-success"></i> <span>23 secs ago</span></span>
+                  </a>
+                
+            </span>
+          </td>
+
+          <td class="hostNameColumn tableNoWrap ">
+            
+                <div class="clearfix">
+                <a class="host-link" href="/host/detail/4d3874ade528c81a1fcdd511/da82adc4cb35d7afa9d69911b10ec732">
+                
+                    <span class="tableHostName">mongo05.10gen.cust.cbici.net</span>
+                    <span class="tableHostPort">:27017</span>
+                  
+                </a>
+                </div>
+                
+                    <div class="text-muted"><i class="icon-warning-sign text-warning tip pull-left" style="font-size:11px;margin-top:3px;" data-original-title="" title=""></i>Host has <a href="http://docs.mongodb.org/manual/reference/ulimit/">low ulimit</a>.</div>
+                
+          </td>
+
+          <td class="hostTypeColumn tableNoWrap ">
+            
+            <span class="label host-label-standalone">standalone</span>
+          </td>
+
+          <td class="clusterNameColumn tableNoWrap ">
+            
+          </td>
+
+          <td class="replSetNameColumn tableNoWrap ">
+            <span class="tableReplName">
+              
+            </span>
+          </td>
+
+          <td class="replSetNameColumn tableNoWrap ">
+            
+          </td>
+
+          <td class="dateColumn tableNoWrap ">
+            11/03/12 - 22:36
+          </td>
+
+          <td class="versionColumn tableNoWrap ">
+            
+                <span class="with-tooltip" title="" data-original-title="This host is running an old version of MongoDB.  Click to view the latest versions.">
+                <a href="http://www.mongodb.org/downloads" target="_blank">
+                  <strong class="text-error">2.2.1</strong>
+                </a>
+                </span>
+              
+          </td>
+
+          <td class="actionsColumn tableNoWrap ">
+            <div class="dropdown pull-right requiresGroupAdmin">
+              <a id="dLabel" role="button" class="btn btn-icon-only pull-right" data-toggle="dropdown" data-target="#" href="/page.html">
+                
+                <i class="icon-gear"></i> <i class="icon-caret-down"></i>
+              </a>
+
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <li>
+                  <a href="#" data-toggle="modal" data-target="#editHostContainer" data-value="da82adc4cb35d7afa9d69911b10ec732" class="requiresGroupAdmin editHostButton">Edit Host
+                  
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="#" data-toggle="modal" data-target="#deleteHostContainer" data-value="da82adc4cb35d7afa9d69911b10ec732" class="requiresGroupAdmin deleteHostButton">Remove Host</a>
+                </li>
+              </ul>
+            </div>
+          </td>
+        </tr><tr class="even">
+          <td class="hostStatusColumn tableNoWrap ">
+            
+            <span data-sortvalue="1389027198331">
+              
+                  <a class="agent-status-link" href="/host/detail/4d3874ade528c81a1fcdd511/6223692368132e0b67e397166bd1aaa7#hostLastPingTab">
+                    <span class="agent-status tip" data-html="true" data-original-title="&lt;strong class='small-caps'&gt;Last Ping&lt;/strong&gt;&lt;span class='value'&gt;Monday, January 06 11:53:18 EST&lt;/span&gt;&lt;strong class='small-caps'&gt;Uptime&lt;/strong&gt;&lt;span class='value'&gt;196 days&lt;/span&gt;"><i class="icon-circle text-success"></i> <span>23 secs ago</span></span>
+                  </a>
+                
+            </span>
+          </td>
+
+          <td class="hostNameColumn tableNoWrap ">
+            
+                <div class="clearfix">
+                <a class="host-link" href="/host/detail/4d3874ade528c81a1fcdd511/6223692368132e0b67e397166bd1aaa7">
+                
+                    <span class="tableHostName">stats.10gen.cc</span>
+                    <span class="tableHostPort">:27017</span>
+                  
+                </a>
+                </div>
+                
+          </td>
+
+          <td class="hostTypeColumn tableNoWrap ">
+            
+            <span class="label host-label-standalone">standalone</span>
+          </td>
+
+          <td class="clusterNameColumn tableNoWrap ">
+            
+          </td>
+
+          <td class="replSetNameColumn tableNoWrap ">
+            <span class="tableReplName">
+              
+            </span>
+          </td>
+
+          <td class="replSetNameColumn tableNoWrap ">
+            
+          </td>
+
+          <td class="dateColumn tableNoWrap ">
+            06/24/13 - 11:28
+          </td>
+
+          <td class="versionColumn tableNoWrap ">
+            
+                <span class="with-tooltip" title="" data-original-title="This host is running an old version of MongoDB.  Click to view the latest versions.">
+                <a href="http://www.mongodb.org/downloads" target="_blank">
+                  <strong class="text-error">2.0.6</strong>
+                </a>
+                </span>
+              
+          </td>
+
+          <td class="actionsColumn tableNoWrap ">
+            <div class="dropdown pull-right requiresGroupAdmin">
+              <a id="dLabel" role="button" class="btn btn-icon-only pull-right" data-toggle="dropdown" data-target="#" href="/page.html">
+                
+                <i class="icon-gear"></i> <i class="icon-caret-down"></i>
+              </a>
+
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <li>
+                  <a href="#" data-toggle="modal" data-target="#editHostContainer" data-value="6223692368132e0b67e397166bd1aaa7" class="requiresGroupAdmin editHostButton">Edit Host
+                  
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="#" data-toggle="modal" data-target="#deleteHostContainer" data-value="6223692368132e0b67e397166bd1aaa7" class="requiresGroupAdmin deleteHostButton">Remove Host</a>
+                </li>
+              </ul>
+            </div>
+          </td>
+        </tr><tr class="odd">
+          <td class="hostStatusColumn tableNoWrap ">
+            
+            <span data-sortvalue="1389027198331">
+              
+                  <a class="agent-status-link" href="/host/detail/4d3874ade528c81a1fcdd511/9a0ebbc0e729fa804181f25ac716d780#hostLastPingTab">
+                    <span class="agent-status tip" data-html="true" data-original-title="&lt;strong class='small-caps'&gt;Last Ping&lt;/strong&gt;&lt;span class='value'&gt;Monday, January 06 11:53:18 EST&lt;/span&gt;&lt;strong class='small-caps'&gt;Uptime&lt;/strong&gt;&lt;span class='value'&gt;26 days&lt;/span&gt;"><i class="icon-circle text-success"></i> <span>23 secs ago</span></span>
+                  </a>
+                
+            </span>
+          </td>
+
+          <td class="hostNameColumn tableNoWrap ">
+            
+                <div class="clearfix">
+                <a class="host-link" href="/host/detail/4d3874ade528c81a1fcdd511/9a0ebbc0e729fa804181f25ac716d780">
+                
+                    <span class="tableHostName">mci-motu.10gen.cc</span>
+                    <span class="tableHostPort">:27017</span>
+                  
+                </a>
+                </div>
+                
+          </td>
+
+          <td class="hostTypeColumn tableNoWrap ">
+            
+            <span class="label host-label-primary">primary</span>
+          </td>
+
+          <td class="clusterNameColumn tableNoWrap ">
+            
+          </td>
+
+          <td class="replSetNameColumn tableNoWrap ">
+            <span class="tableReplName">
+              
+            </span>
+          </td>
+
+          <td class="replSetNameColumn tableNoWrap ">
+            
+              <a href="/host/chartReplSetHosts/4d3874ade528c81a1fcdd511/523388cae4b0c2ddf6c04732">
+                <span class="tableReplName">mci</span>
+              </a>
+            
+          </td>
+
+          <td class="dateColumn tableNoWrap ">
+            12/11/13 - 07:51
+          </td>
+
+          <td class="versionColumn tableNoWrap ">
+            
+                <span class="with-tooltip" title="" data-original-title="This host is running an old version of MongoDB.  Click to view the latest versions.">
+                <a href="http://www.mongodb.org/downloads" target="_blank">
+                  <strong class="text-error">2.4.2</strong>
+                </a>
+                </span>
+              
+          </td>
+
+          <td class="actionsColumn tableNoWrap ">
+            <div class="dropdown pull-right requiresGroupAdmin">
+              <a id="dLabel" role="button" class="btn btn-icon-only pull-right" data-toggle="dropdown" data-target="#" href="/page.html">
+                
+                    <i class="icon-exclamation host-warning-indicator"></i>
+                  
+                <i class="icon-gear"></i> <i class="icon-caret-down"></i>
+              </a>
+
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <li>
+                  <a href="#" data-toggle="modal" data-target="#editHostContainer" data-value="9a0ebbc0e729fa804181f25ac716d780" class="requiresGroupAdmin editHostButton">Edit Host
+                  
+                  <span class="host-warning-label">(Profiling Enabled)</span>
+                  
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="#" data-toggle="modal" data-target="#deleteHostContainer" data-value="9a0ebbc0e729fa804181f25ac716d780" class="requiresGroupAdmin deleteHostButton">Remove Host</a>
+                </li>
+              </ul>
+            </div>
+          </td>
+        </tr><tr class="even">
+          <td class="hostStatusColumn tableNoWrap ">
+            
+            <span data-sortvalue="1389027198331">
+              <span class="agent-status tip" data-html="true" data-original-title="&lt;strong class='small-caps'&gt;Last Ping&lt;/strong&gt;&lt;span class='value'&gt;Monday, January 06 11:53:18 EST&lt;/span&gt;"><i class="icon-circle text-success"></i> <span>23 secs ago</span></span>
+            </span>
+          </td>
+
+          <td class="hostNameColumn tableNoWrap ">
+            
+                    <span class="tableHostName">mci-motu-arbiter.10gen.cc</span>
+                    <span class="tableHostPort">:27017</span>
+                  
+          </td>
+
+          <td class="hostTypeColumn tableNoWrap ">
+            
+            <span class="label host-label-arbiter">arbiter</span>
+          </td>
+
+          <td class="clusterNameColumn tableNoWrap ">
+            
+          </td>
+
+          <td class="replSetNameColumn tableNoWrap ">
+            <span class="tableReplName">
+              
+            </span>
+          </td>
+
+          <td class="replSetNameColumn tableNoWrap ">
+            
+              <a href="/host/chartReplSetHosts/4d3874ade528c81a1fcdd511/523388cae4b0c2ddf6c04732">
+                <span class="tableReplName">mci</span>
+              </a>
+            
+          </td>
+
+          <td class="dateColumn tableNoWrap ">
+            
+          </td>
+
+          <td class="versionColumn tableNoWrap ">
+            
+          </td>
+
+          <td class="actionsColumn tableNoWrap ">
+            <div class="dropdown pull-right requiresGroupAdmin">
+              <a id="dLabel" role="button" class="btn btn-icon-only pull-right" data-toggle="dropdown" data-target="#" href="/page.html">
+                
+                <i class="icon-gear"></i> <i class="icon-caret-down"></i>
+              </a>
+
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <li>
+                  <a href="#" data-toggle="modal" data-target="#editHostContainer" data-value="d86cfc0234404fc18a730de3085cf8a0" class="requiresGroupAdmin editHostButton">Edit Host
+                  
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="#" data-toggle="modal" data-target="#deleteHostContainer" data-value="d86cfc0234404fc18a730de3085cf8a0" class="requiresGroupAdmin deleteHostButton">Remove Host</a>
+                </li>
+              </ul>
+            </div>
+          </td>
+        </tr><tr class="odd">
+          <td class="hostStatusColumn tableNoWrap ">
+            
+            <span data-sortvalue="1389027198331">
+              
+                  <a class="agent-status-link" href="/host/detail/4d3874ade528c81a1fcdd511/6ee52c6e672c5850a9a53ab379e575ea#hostLastPingTab">
+                    <span class="agent-status tip" data-html="true" data-original-title="&lt;strong class='small-caps'&gt;Last Ping&lt;/strong&gt;&lt;span class='value'&gt;Monday, January 06 11:53:18 EST&lt;/span&gt;&lt;strong class='small-caps'&gt;Uptime&lt;/strong&gt;&lt;span class='value'&gt;52 days&lt;/span&gt;"><i class="icon-circle text-success"></i> <span>23 secs ago</span></span>
+                  </a>
+                
+            </span>
+          </td>
+
+          <td class="hostNameColumn tableNoWrap ">
+            
+                <div class="clearfix">
+                <a class="host-link" href="/host/detail/4d3874ade528c81a1fcdd511/6ee52c6e672c5850a9a53ab379e575ea">
+                
+                    <span class="tableHostName">cbi3.ny.10gen.cc</span>
+                    <span class="tableHostPort">:27500</span>
+                  
+                </a>
+                </div>
+                
+          </td>
+
+          <td class="hostTypeColumn tableNoWrap ">
+            
+            <span class="label host-label-primary">primary</span>
+          </td>
+
+          <td class="clusterNameColumn tableNoWrap ">
+            
+          </td>
+
+          <td class="replSetNameColumn tableNoWrap ">
+            <span class="tableReplName">
+              
+            </span>
+          </td>
+
+          <td class="replSetNameColumn tableNoWrap ">
+            
+              <a href="/host/chartReplSetHosts/4d3874ade528c81a1fcdd511/51672a0be4b07b24bc18f901">
+                <span class="tableReplName">mmsconfig1</span>
+              </a>
+            
+          </td>
+
+          <td class="dateColumn tableNoWrap ">
+            11/14/13 - 17:30
+          </td>
+
+          <td class="versionColumn tableNoWrap ">
+            
+                <span class="with-tooltip" title="" data-original-title="This host is running an old version of MongoDB.  Click to view the latest versions.">
+                <a href="http://www.mongodb.org/downloads" target="_blank">
+                  <strong class="text-error">2.2.1</strong>
+                </a>
+                </span>
+              
+          </td>
+
+          <td class="actionsColumn tableNoWrap ">
+            <div class="dropdown pull-right requiresGroupAdmin">
+              <a id="dLabel" role="button" class="btn btn-icon-only pull-right" data-toggle="dropdown" data-target="#" href="/page.html">
+                
+                <i class="icon-gear"></i> <i class="icon-caret-down"></i>
+              </a>
+
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <li>
+                  <a href="#" data-toggle="modal" data-target="#editHostContainer" data-value="6ee52c6e672c5850a9a53ab379e575ea" class="requiresGroupAdmin editHostButton">Edit Host
+                  
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="#" data-toggle="modal" data-target="#deleteHostContainer" data-value="6ee52c6e672c5850a9a53ab379e575ea" class="requiresGroupAdmin deleteHostButton">Remove Host</a>
+                </li>
+              </ul>
+            </div>
+          </td>
+        </tr><tr class="even">
+          <td class="hostStatusColumn tableNoWrap ">
+            
+            <span data-sortvalue="1389027198331">
+              
+                  <a class="agent-status-link" href="/host/detail/4d3874ade528c81a1fcdd511/a9e3dcaa82680e88d3703b3e5cb175dd#hostLastPingTab">
+                    <span class="agent-status tip" data-html="true" data-original-title="&lt;strong class='small-caps'&gt;Last Ping&lt;/strong&gt;&lt;span class='value'&gt;Monday, January 06 11:53:18 EST&lt;/span&gt;&lt;strong class='small-caps'&gt;Uptime&lt;/strong&gt;&lt;span class='value'&gt;52 days&lt;/span&gt;"><i class="icon-circle text-success"></i> <span>23 secs ago</span></span>
+                  </a>
+                
+            </span>
+          </td>
+
+          <td class="hostNameColumn tableNoWrap ">
+            
+                <div class="clearfix">
+                <a class="host-link" href="/host/detail/4d3874ade528c81a1fcdd511/a9e3dcaa82680e88d3703b3e5cb175dd">
+                
+                    <span class="tableHostName">cbi2.chi.10gen.cc</span>
+                    <span class="tableHostPort">:27500</span>
+                  
+                </a>
+                </div>
+                
+          </td>
+
+          <td class="hostTypeColumn tableNoWrap ">
+            
+            <span class="label host-label-secondary">secondary</span>
+          </td>
+
+          <td class="clusterNameColumn tableNoWrap ">
+            
+          </td>
+
+          <td class="replSetNameColumn tableNoWrap ">
+            <span class="tableReplName">
+              
+            </span>
+          </td>
+
+          <td class="replSetNameColumn tableNoWrap ">
+            
+              <a href="/host/chartReplSetHosts/4d3874ade528c81a1fcdd511/51672a0be4b07b24bc18f901">
+                <span class="tableReplName">mmsconfig1</span>
+              </a>
+            
+          </td>
+
+          <td class="dateColumn tableNoWrap ">
+            11/14/13 - 19:19
+          </td>
+
+          <td class="versionColumn tableNoWrap ">
+            
+                <span class="with-tooltip" title="" data-original-title="This host is running an old version of MongoDB.  Click to view the latest versions.">
+                <a href="http://www.mongodb.org/downloads" target="_blank">
+                  <strong class="text-error">2.2.1</strong>
+                </a>
+                </span>
+              
+          </td>
+
+          <td class="actionsColumn tableNoWrap ">
+            <div class="dropdown pull-right requiresGroupAdmin">
+              <a id="dLabel" role="button" class="btn btn-icon-only pull-right" data-toggle="dropdown" data-target="#" href="/page.html">
+                
+                <i class="icon-gear"></i> <i class="icon-caret-down"></i>
+              </a>
+
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <li>
+                  <a href="#" data-toggle="modal" data-target="#editHostContainer" data-value="a9e3dcaa82680e88d3703b3e5cb175dd" class="requiresGroupAdmin editHostButton">Edit Host
+                  
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="#" data-toggle="modal" data-target="#deleteHostContainer" data-value="a9e3dcaa82680e88d3703b3e5cb175dd" class="requiresGroupAdmin deleteHostButton">Remove Host</a>
+                </li>
+              </ul>
+            </div>
+          </td>
+        </tr><tr class="odd">
+          <td class="hostStatusColumn tableNoWrap ">
+            
+            <span data-sortvalue="1389027198331">
+              
+                  <a class="agent-status-link" href="/host/detail/4d3874ade528c81a1fcdd511/e4d7ba7f53950bd6ba2da753be5ceefb#hostLastPingTab">
+                    <span class="agent-status tip" data-html="true" data-original-title="&lt;strong class='small-caps'&gt;Last Ping&lt;/strong&gt;&lt;span class='value'&gt;Monday, January 06 11:53:18 EST&lt;/span&gt;&lt;strong class='small-caps'&gt;Uptime&lt;/strong&gt;&lt;span class='value'&gt;186 days&lt;/span&gt;"><i class="icon-circle text-success"></i> <span>23 secs ago</span></span>
+                  </a>
+                
+            </span>
+          </td>
+
+          <td class="hostNameColumn tableNoWrap ">
+            
+                <div class="clearfix">
+                <a class="host-link" href="/host/detail/4d3874ade528c81a1fcdd511/e4d7ba7f53950bd6ba2da753be5ceefb">
+                
+                    <span class="tableHostName">cbi8.ny.10gen.cc</span>
+                    <span class="tableHostPort">:27500</span>
+                  
+                </a>
+                </div>
+                
+          </td>
+
+          <td class="hostTypeColumn tableNoWrap ">
+            
+            <span class="label host-label-secondary">secondary</span>
+          </td>
+
+          <td class="clusterNameColumn tableNoWrap ">
+            
+          </td>
+
+          <td class="replSetNameColumn tableNoWrap ">
+            <span class="tableReplName">
+              
+            </span>
+          </td>
+
+          <td class="replSetNameColumn tableNoWrap ">
+            
+              <a href="/host/chartReplSetHosts/4d3874ade528c81a1fcdd511/51672a0be4b07b24bc18f901">
+                <span class="tableReplName">mmsconfig1</span>
+              </a>
+            
+          </td>
+
+          <td class="dateColumn tableNoWrap ">
+            07/04/13 - 10:20
+          </td>
+
+          <td class="versionColumn tableNoWrap ">
+            
+                <span class="with-tooltip" title="" data-original-title="This host is running an old version of MongoDB.  Click to view the latest versions.">
+                <a href="http://www.mongodb.org/downloads" target="_blank">
+                  <strong class="text-error">2.2.1</strong>
+                </a>
+                </span>
+              
+          </td>
+
+          <td class="actionsColumn tableNoWrap ">
+            <div class="dropdown pull-right requiresGroupAdmin">
+              <a id="dLabel" role="button" class="btn btn-icon-only pull-right" data-toggle="dropdown" data-target="#" href="/page.html">
+                
+                <i class="icon-gear"></i> <i class="icon-caret-down"></i>
+              </a>
+
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <li>
+                  <a href="#" data-toggle="modal" data-target="#editHostContainer" data-value="e4d7ba7f53950bd6ba2da753be5ceefb" class="requiresGroupAdmin editHostButton">Edit Host
+                  
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="#" data-toggle="modal" data-target="#deleteHostContainer" data-value="e4d7ba7f53950bd6ba2da753be5ceefb" class="requiresGroupAdmin deleteHostButton">Remove Host</a>
+                </li>
+              </ul>
+            </div>
+          </td>
+        </tr><tr class="even">
+          <td class="hostStatusColumn tableNoWrap ">
+            
+            <span data-sortvalue="1389027198331">
+              
+                  <a class="agent-status-link" href="/host/detail/4d3874ade528c81a1fcdd511/b829b1d80eba3d12881ccb8385d11c59#hostLastPingTab">
+                    <span class="agent-status tip" data-html="true" data-original-title="&lt;strong class='small-caps'&gt;Last Ping&lt;/strong&gt;&lt;span class='value'&gt;Monday, January 06 11:53:18 EST&lt;/span&gt;&lt;strong class='small-caps'&gt;Uptime&lt;/strong&gt;&lt;span class='value'&gt;187 days&lt;/span&gt;"><i class="icon-circle text-success"></i> <span>23 secs ago</span></span>
+                  </a>
+                
+            </span>
+          </td>
+
+          <td class="hostNameColumn tableNoWrap ">
+            
+                <div class="clearfix">
+                <a class="host-link" href="/host/detail/4d3874ade528c81a1fcdd511/b829b1d80eba3d12881ccb8385d11c59">
+                
+                    <span class="tableHostName">monitor-screensaver.10gen.cc</span>
+                    <span class="tableHostPort">:27017</span>
+                  
+                </a>
+                </div>
+                
+                    <div class="text-muted"><i class="icon-warning-sign text-warning tip pull-left" style="font-size:11px;margin-top:3px;" data-original-title="" title=""></i>Host has <a href="http://docs.mongodb.org/manual/reference/ulimit/">low ulimit</a>.</div>
+                
+          </td>
+
+          <td class="hostTypeColumn tableNoWrap ">
+            
+            <span class="label host-label-primary">primary</span>
+          </td>
+
+          <td class="clusterNameColumn tableNoWrap ">
+            
+          </td>
+
+          <td class="replSetNameColumn tableNoWrap ">
+            <span class="tableReplName">
+              
+            </span>
+          </td>
+
+          <td class="replSetNameColumn tableNoWrap ">
+            
+              <a href="/host/chartReplSetHosts/4d3874ade528c81a1fcdd511/51d35060e4b0234913180962">
+                <span class="tableReplName">monitorserver</span>
+              </a>
+            
+          </td>
+
+          <td class="dateColumn tableNoWrap ">
+            07/02/13 - 17:20
+          </td>
+
+          <td class="versionColumn tableNoWrap ">
+            
+                <span class="with-tooltip" title="" data-original-title="This host is running an old version of MongoDB.  Click to view the latest versions.">
+                <a href="http://www.mongodb.org/downloads" target="_blank">
+                  <strong class="text-error">2.4.4</strong>
+                </a>
+                </span>
+              
+          </td>
+
+          <td class="actionsColumn tableNoWrap ">
+            <div class="dropdown pull-right requiresGroupAdmin">
+              <a id="dLabel" role="button" class="btn btn-icon-only pull-right" data-toggle="dropdown" data-target="#" href="/page.html">
+                
+                <i class="icon-gear"></i> <i class="icon-caret-down"></i>
+              </a>
+
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <li>
+                  <a href="#" data-toggle="modal" data-target="#editHostContainer" data-value="b829b1d80eba3d12881ccb8385d11c59" class="requiresGroupAdmin editHostButton">Edit Host
+                  
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="#" data-toggle="modal" data-target="#deleteHostContainer" data-value="b829b1d80eba3d12881ccb8385d11c59" class="requiresGroupAdmin deleteHostButton">Remove Host</a>
+                </li>
+              </ul>
+            </div>
+          </td>
+        </tr><tr class="odd">
+          <td class="hostStatusColumn tableNoWrap ">
+            
+            <span data-sortvalue="1389027198331">
+              
+                  <a class="agent-status-link" href="/host/detail/4d3874ade528c81a1fcdd511/5277f6db23be91479fe6499b2d8808c5#hostLastPingTab">
+                    <span class="agent-status tip" data-html="true" data-original-title="&lt;strong class='small-caps'&gt;Last Ping&lt;/strong&gt;&lt;span class='value'&gt;Monday, January 06 11:53:18 EST&lt;/span&gt;&lt;strong class='small-caps'&gt;Uptime&lt;/strong&gt;&lt;span class='value'&gt;171 days&lt;/span&gt;"><i class="icon-circle text-success"></i> <span>23 secs ago</span></span>
+                  </a>
+                
+            </span>
+          </td>
+
+          <td class="hostNameColumn tableNoWrap ">
+            
+                <div class="clearfix">
+                <a class="host-link" href="/host/detail/4d3874ade528c81a1fcdd511/5277f6db23be91479fe6499b2d8808c5">
+                
+                    <span class="tableHostName">www-c1.10gen.cc</span>
+                    <span class="tableHostPort">:27017</span>
+                  
+                </a>
+                </div>
+                
+          </td>
+
+          <td class="hostTypeColumn tableNoWrap ">
+            
+            <span class="label host-label-primary">primary</span>
+          </td>
+
+          <td class="clusterNameColumn tableNoWrap ">
+            
+          </td>
+
+          <td class="replSetNameColumn tableNoWrap ">
+            <span class="tableReplName">
+              
+            </span>
+          </td>
+
+          <td class="replSetNameColumn tableNoWrap ">
+            
+              <a href="/host/chartReplSetHosts/4d3874ade528c81a1fcdd511/51672a0ae4b07b24bc18f8f8">
+                <span class="tableReplName">www-c</span>
+              </a>
+            
+          </td>
+
+          <td class="dateColumn tableNoWrap ">
+            07/18/13 - 23:03
+          </td>
+
+          <td class="versionColumn tableNoWrap ">
+            
+                <span class="with-tooltip" title="" data-original-title="This host is running an old version of MongoDB.  Click to view the latest versions.">
+                <a href="http://www.mongodb.org/downloads" target="_blank">
+                  <strong class="text-error">2.4.5</strong>
+                </a>
+                </span>
+              
+          </td>
+
+          <td class="actionsColumn tableNoWrap ">
+            <div class="dropdown pull-right requiresGroupAdmin">
+              <a id="dLabel" role="button" class="btn btn-icon-only pull-right" data-toggle="dropdown" data-target="#" href="/page.html">
+                
+                  <i class="icon-exclamation host-warning-indicator"></i>
+                
+                    <i class="icon-exclamation host-warning-indicator"></i>
+                  
+                <i class="icon-gear"></i> <i class="icon-caret-down"></i>
+              </a>
+
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <li>
+                  <a href="#" data-toggle="modal" data-target="#editHostContainer" data-value="5277f6db23be91479fe6499b2d8808c5" class="requiresGroupAdmin editHostButton">Edit Host
+                  
+                  <span class="host-warning-label">(Logs Enabled)</span>
+                  
+                  <span class="host-warning-label">(Profiling Enabled)</span>
+                  
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="#" data-toggle="modal" data-target="#deleteHostContainer" data-value="5277f6db23be91479fe6499b2d8808c5" class="requiresGroupAdmin deleteHostButton">Remove Host</a>
+                </li>
+              </ul>
+            </div>
+          </td>
+        </tr><tr class="even">
+          <td class="hostStatusColumn tableNoWrap ">
+            
+            <span data-sortvalue="1389027198331">
+              
+                  <a class="agent-status-link" href="/host/detail/4d3874ade528c81a1fcdd511/0307ad55ac770779fb6c3fa63314cb9e#hostLastPingTab">
+                    <span class="agent-status tip" data-html="true" data-original-title="&lt;strong class='small-caps'&gt;Last Ping&lt;/strong&gt;&lt;span class='value'&gt;Monday, January 06 11:53:18 EST&lt;/span&gt;&lt;strong class='small-caps'&gt;Uptime&lt;/strong&gt;&lt;span class='value'&gt;114 days&lt;/span&gt;"><i class="icon-circle text-success"></i> <span>23 secs ago</span></span>
+                  </a>
+                
+            </span>
+          </td>
+
+          <td class="hostNameColumn tableNoWrap ">
+            
+                <div class="clearfix">
+                <a class="host-link" href="/host/detail/4d3874ade528c81a1fcdd511/0307ad55ac770779fb6c3fa63314cb9e">
+                
+                    <span class="tableHostName">www-c2.10gen.cc</span>
+                    <span class="tableHostPort">:27017</span>
+                  
+                </a>
+                </div>
+                
+          </td>
+
+          <td class="hostTypeColumn tableNoWrap ">
+            
+            <span class="label host-label-secondary">secondary</span>
+          </td>
+
+          <td class="clusterNameColumn tableNoWrap ">
+            
+          </td>
+
+          <td class="replSetNameColumn tableNoWrap ">
+            <span class="tableReplName">
+              
+            </span>
+          </td>
+
+          <td class="replSetNameColumn tableNoWrap ">
+            
+              <a href="/host/chartReplSetHosts/4d3874ade528c81a1fcdd511/51672a0ae4b07b24bc18f8f8">
+                <span class="tableReplName">www-c</span>
+              </a>
+            
+          </td>
+
+          <td class="dateColumn tableNoWrap ">
+            09/13/13 - 13:26
+          </td>
+
+          <td class="versionColumn tableNoWrap ">
+            
+                <span class="with-tooltip" title="" data-original-title="This host is running an old version of MongoDB.  Click to view the latest versions.">
+                <a href="http://www.mongodb.org/downloads" target="_blank">
+                  <strong class="text-error">2.4.5</strong>
+                </a>
+                </span>
+              
+          </td>
+
+          <td class="actionsColumn tableNoWrap ">
+            <div class="dropdown pull-right requiresGroupAdmin">
+              <a id="dLabel" role="button" class="btn btn-icon-only pull-right" data-toggle="dropdown" data-target="#" href="/page.html">
+                
+                  <i class="icon-exclamation host-warning-indicator"></i>
+                
+                <i class="icon-gear"></i> <i class="icon-caret-down"></i>
+              </a>
+
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <li>
+                  <a href="#" data-toggle="modal" data-target="#editHostContainer" data-value="0307ad55ac770779fb6c3fa63314cb9e" class="requiresGroupAdmin editHostButton">Edit Host
+                  
+                  <span class="host-warning-label">(Alerts Disabled)</span>
+                  
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="#" data-toggle="modal" data-target="#deleteHostContainer" data-value="0307ad55ac770779fb6c3fa63314cb9e" class="requiresGroupAdmin deleteHostButton">Remove Host</a>
+                </li>
+              </ul>
+            </div>
+          </td>
+        </tr><tr class="odd">
+          <td class="hostStatusColumn tableNoWrap ">
+            
+            <span data-sortvalue="1389027198331">
+              
+                  <a class="agent-status-link" href="/host/detail/4d3874ade528c81a1fcdd511/ebf4d4a341137407fadb7fa31cb5cea3#hostLastPingTab">
+                    <span class="agent-status tip" data-html="true" data-original-title="&lt;strong class='small-caps'&gt;Last Ping&lt;/strong&gt;&lt;span class='value'&gt;Monday, January 06 11:53:18 EST&lt;/span&gt;&lt;strong class='small-caps'&gt;Uptime&lt;/strong&gt;&lt;span class='value'&gt;171 days&lt;/span&gt;"><i class="icon-circle text-success"></i> <span>23 secs ago</span></span>
+                  </a>
+                
+            </span>
+          </td>
+
+          <td class="hostNameColumn tableNoWrap ">
+            
+                <div class="clearfix">
+                <a class="host-link" href="/host/detail/4d3874ade528c81a1fcdd511/ebf4d4a341137407fadb7fa31cb5cea3">
+                
+                    <span class="tableHostName">www-c3.10gen.cc</span>
+                    <span class="tableHostPort">:27017</span>
+                  
+                </a>
+                </div>
+                
+          </td>
+
+          <td class="hostTypeColumn tableNoWrap ">
+            
+            <span class="label host-label-secondary">secondary</span>
+          </td>
+
+          <td class="clusterNameColumn tableNoWrap ">
+            
+          </td>
+
+          <td class="replSetNameColumn tableNoWrap ">
+            <span class="tableReplName">
+              
+            </span>
+          </td>
+
+          <td class="replSetNameColumn tableNoWrap ">
+            
+              <a href="/host/chartReplSetHosts/4d3874ade528c81a1fcdd511/51672a0ae4b07b24bc18f8f8">
+                <span class="tableReplName">www-c</span>
+              </a>
+            
+          </td>
+
+          <td class="dateColumn tableNoWrap ">
+            07/18/13 - 23:00
+          </td>
+
+          <td class="versionColumn tableNoWrap ">
+            
+                <span class="with-tooltip" title="" data-original-title="This host is running an old version of MongoDB.  Click to view the latest versions.">
+                <a href="http://www.mongodb.org/downloads" target="_blank">
+                  <strong class="text-error">2.4.0</strong>
+                </a>
+                </span>
+              
+          </td>
+
+          <td class="actionsColumn tableNoWrap ">
+            <div class="dropdown pull-right requiresGroupAdmin">
+              <a id="dLabel" role="button" class="btn btn-icon-only pull-right" data-toggle="dropdown" data-target="#" href="/page.html">
+                
+                <i class="icon-gear"></i> <i class="icon-caret-down"></i>
+              </a>
+
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <li>
+                  <a href="#" data-toggle="modal" data-target="#editHostContainer" data-value="ebf4d4a341137407fadb7fa31cb5cea3" class="requiresGroupAdmin editHostButton">Edit Host
+                  
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="#" data-toggle="modal" data-target="#deleteHostContainer" data-value="ebf4d4a341137407fadb7fa31cb5cea3" class="requiresGroupAdmin deleteHostButton">Remove Host</a>
+                </li>
+              </ul>
+            </div>
+          </td>
+        </tr></tbody></table><div class="row"><div class="col-md-12"><div class="btn-group dataTables_paginate paging_two_button" id="hostsTable_paginate"><a class="btn btn-icon-only disabled" tabindex="0" role="button" id="hostsTable_previous" aria-controls="hostsTable"><i class="icon-chevron-left"></i></a><a class="btn btn-icon-only disabled" tabindex="0" role="button" id="hostsTable_next" aria-controls="hostsTable"><i class="icon-chevron-right"></i></a></div><div class="dataTables_info" id="hostsTable_info"><strong>1</strong>–<strong>13</strong> of <strong>13</strong></div></div></div></div>
+</div>
+
+          </div>
+          <div id="mongosHosts" class="tab-pane fade">
+            
+<div class="hostsTableContainer">
+
+  <div id="mongosHostsTable_wrapper" class="dataTables_wrapper form-inline" role="grid"><div class="row table-top"><div class="col-md-12"><div class="dataTables_filter" id="mongosHostsTable_filter"><label><i class="icon-search"></i> <input type="text" aria-controls="mongosHostsTable"></label></div></div></div><table class="table table-hover dataTable" id="mongosHostsTable" aria-describedby="mongosHostsTable_info">
+    <thead>
+      <tr role="row"><th class="sorting" role="columnheader" tabindex="0" aria-controls="mongosHostsTable" rowspan="1" colspan="1" aria-label="Last Ping: activate to sort column ascending">Last Ping</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="mongosHostsTable" rowspan="1" colspan="1" aria-label="Host: activate to sort column ascending">Host</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="mongosHostsTable" rowspan="1" colspan="1" aria-label="Type: activate to sort column ascending">Type</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="mongosHostsTable" rowspan="1" colspan="1" aria-label="Cluster: activate to sort column ascending">Cluster</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="mongosHostsTable" rowspan="1" colspan="1" aria-label="Shard: activate to sort column ascending">Shard</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="mongosHostsTable" rowspan="1" colspan="1" aria-label="Repl Set: activate to sort column ascending">Repl Set</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="mongosHostsTable" rowspan="1" colspan="1" aria-label="Up Since: activate to sort column ascending">Up Since</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="mongosHostsTable" rowspan="1" colspan="1" aria-label="Version: activate to sort column ascending">Version</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="mongosHostsTable" rowspan="1" colspan="1" aria-label="&amp;nbsp;: activate to sort column ascending">&nbsp;</th></tr>
+    </thead>
+
+    
+  <tbody role="alert" aria-live="polite" aria-relevant="all"><tr class="odd"><td valign="top" colspan="9" class="dataTables_empty">No data available in table</td></tr></tbody></table><div class="row"><div class="col-md-12"><div class="btn-group dataTables_paginate paging_two_button" id="mongosHostsTable_paginate"><a class="btn btn-icon-only disabled" tabindex="0" role="button" id="mongosHostsTable_previous" aria-controls="mongosHostsTable"><i class="icon-chevron-left"></i></a><a class="btn btn-icon-only disabled" tabindex="0" role="button" id="mongosHostsTable_next" aria-controls="mongosHostsTable"><i class="icon-chevron-right"></i></a></div><div class="dataTables_info" id="mongosHostsTable_info"><strong>0</strong>–<strong>0</strong> of <strong>0</strong></div></div></div></div>
+</div>
+
+          </div>
+          <div id="confHosts" class="tab-pane fade">
+            
+<div class="hostsTableContainer">
+
+  <div id="confHostsTable_wrapper" class="dataTables_wrapper form-inline" role="grid"><div class="row table-top"><div class="col-md-12"><div class="dataTables_filter" id="confHostsTable_filter"><label><i class="icon-search"></i> <input type="text" aria-controls="confHostsTable"></label></div></div></div><table class="table table-hover dataTable" id="confHostsTable" aria-describedby="confHostsTable_info">
+    <thead>
+      <tr role="row"><th class="sorting" role="columnheader" tabindex="0" aria-controls="confHostsTable" rowspan="1" colspan="1" aria-label="Last Ping: activate to sort column ascending">Last Ping</th><th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="confHostsTable" rowspan="1" colspan="1" aria-label="Host: activate to sort column ascending">Host</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="confHostsTable" rowspan="1" colspan="1" aria-label="Type: activate to sort column ascending">Type</th><th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="confHostsTable" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Cluster: activate to sort column descending">Cluster</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="confHostsTable" rowspan="1" colspan="1" aria-label="Shard: activate to sort column ascending">Shard</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="confHostsTable" rowspan="1" colspan="1" aria-label="Repl Set: activate to sort column ascending">Repl Set</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="confHostsTable" rowspan="1" colspan="1" aria-label="Up Since: activate to sort column ascending">Up Since</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="confHostsTable" rowspan="1" colspan="1" aria-label="Version: activate to sort column ascending">Version</th><th class="sorting" role="columnheader" tabindex="0" aria-controls="confHostsTable" rowspan="1" colspan="1" aria-label="&amp;nbsp;: activate to sort column ascending">&nbsp;</th></tr>
+    </thead>
+
+    
+  <tbody role="alert" aria-live="polite" aria-relevant="all"><tr class="odd"><td valign="top" colspan="9" class="dataTables_empty">No data available in table</td></tr></tbody></table><div class="row"><div class="col-md-12"><div class="btn-group dataTables_paginate paging_two_button" id="confHostsTable_paginate"><a class="btn btn-icon-only disabled" tabindex="0" role="button" id="confHostsTable_previous" aria-controls="confHostsTable"><i class="icon-chevron-left"></i></a><a class="btn btn-icon-only disabled" tabindex="0" role="button" id="confHostsTable_next" aria-controls="confHostsTable"><i class="icon-chevron-right"></i></a></div><div class="dataTables_info" id="confHostsTable_info"><strong>0</strong>–<strong>0</strong> of <strong>0</strong></div></div></div></div>
+</div>
+
+          </div>
+          <div id="agentsTab" class="tab-pane fade"></div>
+          <div id="agentLogsTab" class="tab-pane fade"></div>
+          <div id="pingsTab" class="tab-pane fade"></div>
+          <div id="hostAliasesTab" class="tab-pane fade"></div>
+          <div id="deletedHostsTab" class="tab-pane fade"></div>
+          <div id="commandLineOptsTab" class="tab-pane fade"></div>
+
+        </div>
+    </div>
+</div>

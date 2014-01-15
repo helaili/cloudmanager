@@ -1,0 +1,234 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>MCM: MongoDB Cloud Manager</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="css/smoothness/jquery-ui-1.10.3.custom.min.css">
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+<link rel="stylesheet" type="text/css" href="css/mcm.css">
+
+<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.10.3.custom.js"></script>
+<script type="text/javascript" src="js/mcm.js"></script>
+
+
+</head>
+
+<body class="mmsBody " style="" crossrider_data_store_temp="{}">
+
+	<div id="wrapper">
+		<div id="loading">
+			<div id="fountainG">
+				<div id="fountainG_1" class="fountainG"></div>
+				<div id="fountainG_2" class="fountainG"></div>
+				<div id="fountainG_3" class="fountainG"></div>
+				<div id="fountainG_4" class="fountainG"></div>
+				<div id="fountainG_5" class="fountainG"></div>
+				<div id="fountainG_6" class="fountainG"></div>
+				<div id="fountainG_7" class="fountainG"></div>
+				<div id="fountainG_8" class="fountainG"></div>
+			</div>
+		</div>
+
+
+		<div id="page" class="default ">
+			<div class="navbar navbar-inverse navbar-fixed-top">
+				<div class="navbar-header">
+
+
+					<a class="navbar-brand" href="/host/list/4d3874ade528c81a1fcdd511" style="">MCM</a>
+
+ 
+
+				</div>
+
+				<a class="nav-show-hide"><i class="icon-caret-left"></i><i class="icon-caret-left"></i></a>
+
+				<ul class="nav navbar-nav side-nav">
+					<li id="navClusters"><a onclick='loadNavClusters()' href='#'><i class="custom-icon-hosts"></i><br> <span class="text">Clusters</span></a></li>
+
+					<li id="navSettings"><a onclick='loadNavSettings()' href='#'><i class="custom-icon-settings"></i><br> <span class="text">Settings</span></a></li>
+					<li class="nav-footer">
+
+						<button class="btn btn-primary" id="featureRequestToggle" data-toggle="modal" data-target="#feedbackModal">
+							<i class="custom-icon-feedback"></i><br> <span class="text">Feedback</span>
+						</button>
+
+					</li>
+				</ul>
+
+				<ul class="nav navbar-nav side-sub-nav nav-list" id="side-sub-nav">
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right secondary" style="color: white;">
+
+					<li><a id="new-alert-notification" class="muted new-alert-notification" href="/activity/list/4d3874ade528c81a1fcdd511"> <span
+							class="new-alert-count jshide" style="display: inline;">1</span><i class="icon-bell-alt icon-large"></i>
+					</a></li>
+
+					<li><a class="muted" href="/links/support">Help &amp; Support</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle user-menu" data-toggle="dropdown"> Alain <b class="caret"></b>
+					</a>
+						<ul class="dropdown-menu">
+							<li><a href="/settings/main/4d3874ade528c81a1fcdd511">Settings</a></li>
+							<li><a href="/user/signout">Sign Out</a></li>
+						</ul></li>
+				</ul>
+			</div>
+			<div class="navbar-alert alert alert-warning jshide" id="uiMsgs" style="display: none;"></div>
+
+			<script type="text/javascript">
+				$(document).ready(function() {
+					loadNavClusters();
+				});
+			</script>
+
+
+			<div id="page-wrapper">
+				<div class="status-bar clearfix">
+					<ol class="breadcrumb" style="visibility: hidden;">
+						<li><a href="#">Hosts</a></li>
+						<li class="active">LeafyPro.local:30001</li>
+					</ol>
+					<div id="time-zone-display">
+						<div id="currentTimeZone">
+							<a href="#changeTimeZone" class="changeTimeZone tip" data-placement="bottom"
+								data-original-title="User timezone is set to Eastern Time (US &amp; Canada)"> <i class="icon-globe"></i> Eastern Time (US &amp;
+								Canada)
+							</a>
+						</div>
+						<div id="timeZoneChangeContainer" class="modal" tabindex="-1">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+										<h3>Change Time Zone</h3>
+									</div>
+									<div class="modal-body">
+										<select id="timeZoneIdDialogSelect" class="form-control">
+											<option value="BROWSER">Not set</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<div id="tab-content" class="tab-content"></div>
+					</div>
+				</div>
+
+			</div>
+			<div class="push-footer"></div>
+		</div>
+
+		<footer>
+
+
+			<div class="row">
+				<div class="col-sm-9">
+					<p>
+						©2014 MongoDB, Inc. • <a href="/links/terms-of-service">Terms</a> • <a href="/links/privacy-policy">Privacy</a>• <a
+							href="/links/support">Help &amp; Support</a> • <a href="http://www.mongodb.com/blog/">MongoDB Blog</a> • +1 (866) 237-8815 • <a
+							id="findStuffLink">User Search</a>
+
+					</p>
+
+
+				</div>
+				<div class="col-sm-3">
+					<p class="text-right">
+						<b>Primary</b>: <a href="mailto:alain.helaili@mongodb.com">alain.helaili@mongodb.com</a><br>
+
+					</p>
+				</div>
+			</div>
+		</footer>
+
+		<div id="findStuffContainer" class="modal" tabindex="-1">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+						<h3>Find</h3>
+					</div>
+					<form id="findStuffForm" action="" class="form-horizontal" method="get">
+						<div class="modal-body">
+							<div id="findStuffFormErrorMsgs"></div>
+
+							<div class="form-group">
+								<label class="control-label col-sm-4" for="findValue" id="findValueLabel">User Email</label>
+								<div class="col-sm-7">
+									<input type="text" class="form-control" name="findValue" id="findValue">
+								</div>
+							</div>
+							<hr>
+							<div id="findStuffResults"></div>
+							<br> <br>
+						</div>
+						<div class="modal-footer">
+							<button id="findStuffSubmit" type="submit" class="btn btn-primary">Find</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="feedbackModal" class="modal" tabindex="-1">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+						<h3>Feedback</h3>
+					</div>
+					<div class="modal-body">
+						<div id="feedbackFormErrorMsgs"></div>
+						<p>We welcome feedback from our users! This will create a public feature request.</p>
+						<form class="form-horizontal">
+							<div class="form-group">
+								<label class="control-label col-sm-4">I Wish This Page</label>
+								<div class="col-sm-7">
+									<input class="form-control" type="text" value="" id="featureRequestSummary">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-4">More details (optional)</label>
+								<div class="col-sm-7">
+									<textarea class="form-control" id="featureRequestDescription" rows="6"></textarea>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<input class="btn btn-primary" type="submit" value="Submit" id="featureRequestSubmit">
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+
+			});
+		</script>
+
+
+
+
+	</div>
+
+
+</body>
+</html>
